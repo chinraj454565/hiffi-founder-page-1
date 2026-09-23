@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Founder's Story — Hiffi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#E31E30;
+    --red-dark:#C4172A;
+    --ink:#111114;
+    --ink-soft:#5B5B63;
+    --line:#ECECEE;
+    --bg-soft:#FAFAFA;
+    --card:#F5F5F7;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#fff;
+    color:var(--ink);
+    font-family:'Inter', -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Top bar */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0.9rem 1.5rem;
+    border-bottom:1px solid var(--line);
+    padding-top:calc(0.9rem + env(safe-area-inset-top,0px));
+  }
+  .logo{display:flex; align-items:center; gap:0.55rem;}
+  .logo svg{display:block;}
+  .logo span{
+    font-weight:900;
+    font-size:1.35rem;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .back{
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:0.45rem 1rem;
+    white-space:nowrap;
+  }
+
+  main{max-width:720px; margin:0 auto; padding:0 1.5rem;}
+
+  /* Hero */
+  .hero{padding:3.2rem 0 1.8rem;}
+  .kicker{
+    display:inline-block;
+    color:var(--red);
+    font-weight:800;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    margin-bottom:1.1rem;
+  }
+  h1{
+    font-weight:900;
+    font-size:clamp(2rem, 6vw, 3.1rem);
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    margin:0 0 1rem;
+  }
+  .hero p{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin:0;
+    line-height:1.55;
+  }
+
+  /* Content */
+  section{margin:2.6rem 0;}
+  h2{
+    font-weight:800;
+    font-size:1.4rem;
+    letter-spacing:-0.01em;
+    margin:0 0 1.1rem;
+  }
+  p{
+    font-size:1.03rem;
+    line-height:1.72;
+    color:#2B2B31;
+    margin:0 0 1.05rem;
+    max-width:66ch;
+  }
+  p:last-child{margin-bottom:0;}
+
+  blockquote{
+    margin:1.8rem 0;
+    padding:1.3rem 1.5rem;
+    background:var(--card);
+    border-left:4px solid var(--red);
+    border-radius:10px;
+    font-weight:700;
+    font-size:1.22rem;
+    line-height:1.4;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+
+  .questions{
+    background:var(--ink);
+    color:#fff;
+    border-radius:14px;
+    padding:1.7rem 1.8rem;
+    margin:1.8rem 0;
+  }
+  .questions p{color:#E9E9EC; font-weight:500; margin:0 0 0.75rem;}
+  .questions p:last-child{margin-bottom:0;}
+
+  .divider{
+    height:1px;
+    background:var(--line);
+    margin:0;
+  }
+
+  .signoff{
+    text-align:center;
+    padding:2.6rem 0 3.6rem;
+  }
+  .signoff .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    background:var(--card);
+    border-radius:999px;
+    padding:0.6rem 1.2rem;
+    font-weight:700;
+    font-size:0.95rem;
+  }
+  .signoff .pill .dot{
+    width:8px; height:8px; border-radius:50%; background:var(--red);
+  }
+  .signoff .role{
+    display:block;
+    margin-top:0.9rem;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+  }
+
+  footer{
+    background:var(--bg-soft);
+    border-top:1px solid var(--line);
+    text-align:center;
+    padding:2.4rem 1.5rem calc(2.4rem + env(safe-area-inset-bottom,0px));
+  }
+  footer .flogo{font-weight:900; font-size:1.1rem; color:var(--ink); margin-bottom:0.35rem;}
+  footer .tag{color:var(--ink-soft); font-size:0.9rem;}
+
+  @media (max-width:560px){
+    body{font-size:16px;}
+    .topbar{padding:0.8rem 1.1rem;}
+    main{padding:0 1.1rem;}
+    .hero{padding:2.2rem 0 1.3rem;}
+    h1{font-size:2rem;}
+    h2{font-size:1.2rem;}
+    blockquote{font-size:1.08rem; padding:1.1rem 1.25rem;}
+    .questions{padding:1.4rem 1.4rem;}
+  }
+
+  ::selection{background:var(--red); color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">
+    <img src="https://www.hiffi.com/appbarlogo.png" alt="Hiffi Logo" height="30">
+  </div>
+  <a class="back" href="https://www.hiffi.com/">Back to Hiffi</a>
+</div>
+
+<main id="top">
+
+  <div class="hero">
+    <span class="kicker">The Founder's Story</span>
+    <h1>Talent is everywhere. Opportunity should be too.</h1>
+    <p>On why Hiffi exists, and the artists it was built for.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <p>Music has been part of my life for as long as I can remember. I have never been an artist. I have never produced a record. I began where millions of people begin — as a listener.</p>
+    <p>But music, to me, has never simply been something playing in the background. It is memory. A song can take me back twenty years in a matter of seconds. To a particular place. A particular person. A particular feeling. There are songs that remind me of childhood, songs that belong to certain chapters of my life, and songs that somehow seem to preserve moments exactly as they were. In that sense, music has always felt like a time machine.</p>
+    <p>I can listen to it all day, across genres, across generations and across cultures. I genuinely cannot imagine a life without music. Without it, the world would somehow feel quieter, emptier and a little less human.</p>
+    <p>Perhaps that is why something about the music industry has bothered me for a very long time. I have encountered extraordinarily talented artists in my own region — singers, musicians and creators with abilities that deserved audiences far beyond the places they came from. Some of them had extraordinary potential. And yet the world never discovered them. Eventually, many simply disappeared. Not because they weren't talented. Not because they didn't work hard enough. But because talent alone wasn't enough to make them visible.</p>
+    <p>And I began wondering:</p>
+    <div class="questions">
+      <p>How many extraordinary artists has the world never heard?</p>
+      <p>How many incredible songs were created in bedrooms, small studios, towns and communities far away from the traditional centres of the music industry?</p>
+      <p>How many artists gave everything they had to their craft, waited for an opportunity that never arrived, and eventually walked away?</p>
+    </div>
+    <p>That question stayed with me. And somewhere inside that question, Hiffi began.</p>
+  </section>
+
+  <section>
+    <h2>We democratized creation. We haven't democratized opportunity.</h2>
+    <p>Something remarkable has happened to music over the past generation. Technology made creation accessible. A young artist can create extraordinary music without an expensive recording studio. The internet made distribution accessible. An independent musician can release a song from almost anywhere and make it available to people on the other side of the planet. Social media made audiences accessible. And yet one of the most important problems remains unsolved.</p>
+    <p>Discovery.</p>
+    <p>We live in a world overflowing with content. Millions of creators are competing for seconds of attention. Algorithms reward engagement. Trends move at extraordinary speed. Something can become globally viral today and almost invisible tomorrow. The ability to publish has never been greater. But being available is not the same as being discovered. And being discovered is not the same as building a career.</p>
+    <p>For generations, aspiring artists were told that success meant being discovered by the right person, signing with the right record label, finding the right manager or gaining access to the right network. I don't believe the future of music should work that way.</p>
+    <p>Record labels, managers and other industry institutions will continue to play important roles. But they should be choices in an artist's journey — not the gate through which every artist must pass. Because talent does not belong to any institution. And opportunity shouldn't either.</p>
+  </section>
+
+  <section>
+    <h2>Your postcode shouldn't determine how far your talent can travel.</h2>
+    <p>The next extraordinary artist could be anywhere. New York. London. Seoul. Lagos. Mumbai. Or somewhere almost nobody in the global music business is looking. That last possibility matters deeply to me. Because I have seen what happens when extraordinary talent exists far away from the traditional centres of opportunity. Too often, those artists don't fail dramatically. Something much sadder happens. They simply fade away.</p>
+    <p>Their music never travels far enough. Their audience never becomes large enough. Their breakthrough never arrives. Eventually life moves on. And the world never knows what it missed.</p>
+    <p>That's where I believe Hiffi can make a difference. Hiffi was created around a simple belief:</p>
+    <blockquote>Talent is everywhere. Opportunity should be too.</blockquote>
+    <p>Our ambition isn't to promise every artist fame. Nobody can — and nobody should. Our ambition is to build an ecosystem where independent artists have a genuine opportunity to be seen, heard, discovered and supported. Where artists can build identities. Where they can build communities around their music. Where fans aren't merely consumers at the end of the distribution chain, but participants in discovering what comes next.</p>
+    <p>And where an artist doesn't have to wait for somebody powerful to say: "You have permission to begin."</p>
+  </section>
+
+  <section>
+    <h2>From streams to careers</h2>
+    <p>I believe the next chapter of the music industry will be about much more than streaming. A stream is a transaction. A career is a journey. Artists are no longer simply musicians. They are creators, entrepreneurs, communities and brands. And increasingly, they should have the ability to own the things they create around themselves — their identity, their audience, their community, their data and the economic opportunities generated by their work.</p>
+    <p>Hiffi's long-term ambition is therefore much bigger than becoming another place where music exists. We want to help create an ecosystem around artist discovery and artist growth. Imagine an unknown teenager uploading their music today. Almost nobody knows their name. A few listeners discover them. Then a few hundred. A community begins forming. People start sharing their work. Momentum builds. Years later, that same artist is performing before tens of thousands of people. And somewhere in the earliest chapter of that extraordinary journey was Hiffi.</p>
+    <p>We gave them the breakthrough they deserved. That is the company I want us to build.</p>
+  </section>
+
+  <section>
+    <h2>Where the world discovers what comes next</h2>
+    <p>One day, I hope Hiffi becomes synonymous not simply with who is popular today, but with who matters tomorrow. I imagine a future where music fans come to Hiffi because they want the thrill of discovering somebody before the rest of the world does. Where the music industry watches Hiffi because something new is constantly emerging. Where our artist rankings and the HIFF Top 500 Artist Index become a global window into the next generation of musical talent — not simply another chart measuring who's already famous.</p>
+    <p>A signal of who is rising. Who is breaking through. Who the world should be paying attention to next. I want someone someday to be able to say:</p>
+    <blockquote>I discovered them on Hiffi before the world knew their name.</blockquote>
+    <p>Because discovery itself is one of the great joys of music.</p>
+  </section>
+
+  <section>
+    <h2>This is bigger than Hiffi</h2>
+    <p>I don't know who the next generation-defining artist will be. None of us do. But I believe that somewhere, that person already exists. Maybe they're recording tonight. Maybe they have 300 followers. Maybe they are working a regular job during the day and making music late at night. Maybe they live thousands of kilometres from the nearest major music company. Maybe they've uploaded ten songs and almost nobody has listened. Maybe they're wondering whether they should give up. That is the artist I think about. Because somewhere along the way, somebody has to believe that their talent deserves a chance.</p>
+    <p>Hiffi cannot create their talent. We cannot write their songs. We cannot determine how far their journey will ultimately take them. But perhaps we can help make sure the journey gets a chance to begin.</p>
+    <p>And if Hiffi becomes everything I believe it can become, I don't want its greatest legacy to be measured only by its valuation, the number of users on the platform or the amount of music streamed through it. I want it measured in human stories. Artists who were discovered. Careers that were created. Communities that formed. Dreams that survived long enough to become something real.</p>
+    <p>And perhaps, decades from now, there will be artists standing on the world's biggest stages who can look back at where everything started and say:</p>
+    <blockquote>Hiffi gave me my first real chance.</blockquote>
+    <p>If enough people can say that, then we will have built something worth building. And personally, I will know that the music that gave so much meaning to my own life allowed me, in some small way, to give something back to the generations that came after me.</p>
+    <p>That would be more than the success of a company. That would be my legacy.</p>
+  </section>
+
+  <div class="signoff">
+    <div class="pill"><span class="dot"></span>Founder, Hiffi</div>
+    <span class="role">Talent is everywhere. Opportunity should be too.</span>
+  </div>
+
+</main>
+
+<footer>
+  <div class="flogo"><img src="https://www.hiffi.com/appbarlogo.png" alt="Hiffi Logo" height="30"></div>
+  <div class="tag">Where the world discovers what comes next.</div>
+</footer>
+
+</body>
+</html>
